@@ -1,1 +1,1 @@
-# Criação de uma API com NodeJS MySQL - CRUD Completo
+# Aplicação CRUD com upload de imagem
