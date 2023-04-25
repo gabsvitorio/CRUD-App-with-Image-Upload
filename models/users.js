@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
-    name: {
+    nome: {
         type: String,
         required: true,
     },
@@ -12,11 +12,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    image: {
+    imagem: {
         type: String,
         required: true,
     },
-    created: {
+    criado: {
         type: Date,
         required: true,
         default: Date.now,
