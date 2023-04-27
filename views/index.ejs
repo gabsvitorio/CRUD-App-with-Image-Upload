@@ -14,12 +14,12 @@
                     <table class="table table-striped text-center my-3">
                         <thead>
                             <tr class="table-dark">
-                                <th class="text-center">ID</th>
-                                <th class="text-center">Imagem</th>
-                                <th class="text-center">Nome</th>
-                                <th class="text-center">E-mail</th>
-                                <th class="text-center">Telefone</th>
-                                <th class="text-center">Editar/Deletar</th>
+                                <th>ID</th>
+                                <th>Imagem</th>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Telefone</th>
+                                <th>Editar/Deletar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,8 +31,8 @@
                                     <td><%= row.email %></td>
                                     <td><%= row.telefone %></td>
                                     <td>
-                                        <a href="/editar/<%= row._id %>" class="text-success"><i class="fas fa-edit fa-lg mx-1"></i></a>
-                                        <a href="/deletar/<%= row._id %>" class="text-danger"><i class="fas fa-trash fa-lg mx-1"></i></a>
+                                        <a href="/edit/<%= row._id %>" class="text-success"><i class="fas fa-edit fa-lg mx-1"></i></a>
+                                        <a href="/delete/<%= row._id %>" class="text-danger"><i class="fas fa-trash fa-lg mx-1"></i></a>
                                     </td>
                                 </tr>                             
                             <% }) %>
