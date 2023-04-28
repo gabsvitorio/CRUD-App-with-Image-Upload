@@ -72,11 +72,11 @@ router.get('/edit/:id', (req, res) => {
     });
 });
 
-router.post('/update/:id', upload, (req, res) => {
+router.post("/update/:id", upload, (req, res) => {
     let id = req.params.id;
-    let nova_imagem = '';
+    let nova_imagem = "";
 
-    if (res.file) {
+    if (req.file) {
         nova_imagem = req.file.filename;
         try{
             fs.unlinkSync("./uploads/" + req.body.imagem_anterior);
@@ -103,6 +103,30 @@ router.post('/update/:id', upload, (req, res) => {
             res.redirect('/');
         }
     })
+});
+
+
+router.get("/delete/:id", (req, res) => {
+    let id = req.params.id;
+    User.findByIdAndRemove(id, (err, result) => {
+        if(result.imagem != ""){
+            try {
+                fs.unlinkSync("./uploads/" + result.imagem);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+        if(err){
+            res.json({ message: err.message });
+        }else{
+            req.session.message = {
+                type: "info",
+                message: "Usuário deletado com sucesso!",
+            };
+            res.redirect("/");
+        }
+    });
 });
 
 module.exports = router;
