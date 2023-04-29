@@ -1,6 +1,6 @@
-<h1>Aplicação CRUD com upload de imagem</h1>
+<h1>Aplicação CRUD</h1>
 
-
+<img src="https://user-images.githubusercontent.com/123759589/235280621-d462d31e-da7d-44ba-a799-ff05974903ea.png" height="450" width="900">
 
 <br>
 
