@@ -6,7 +6,7 @@
 
 ## Sobre o projeto
 
-Esta é uma aplicação web que serve para cadastro, edição e remoção de usuários, utilizando Node.js
+Esta é uma aplicação web que realiza cadastro, edição e remoção de usuários. Criada para fins de aprendizagem em Node.js e MongoDB.
 
 <br>
 
